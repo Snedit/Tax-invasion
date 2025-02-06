@@ -1,0 +1,10 @@
+{
+    "id": 5,
+    "value": "MIDCPUBFY",
+    "strike_difference": 75,
+    "lot_size": 50,
+    "expiry_week": 0,
+    "name": "NIFTY MID SELECT",
+    "exchange_id": 1
+  }
+  
