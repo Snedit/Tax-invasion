@@ -1,4 +1,41 @@
-{
+[
+  {
+    "id": 1,
+    "value": "NIFTY50",
+    "strike_difference": 50,
+    "lot_size": 75,
+    "expiry_week": 2,
+    "name": "NIFTY 50",
+    "exchange_id": 1
+  },
+  {
+    "id": 2,
+    "value": "BANKNIFTY",
+    "strike_difference": 100,
+    "lot_size": 25,
+    "expiry_week": 1,
+    "name": "NIFTY BANK",
+    "exchange_id": 2
+  },
+  {
+    "id": 3,
+    "value": "FINNIFTY",
+    "strike_difference": 25,
+    "lot_size": 40,
+    "expiry_week": 0,
+    "name": "NIFTY FIN SERVICE",
+    "exchange_id": 3
+  },
+  {
+    "id": 4,
+    "value": "MIDCPNIFTY",
+    "strike_difference": 75,
+    "lot_size": 50,
+    "expiry_week": 1,
+    "name": "NIFTY MIDCAP SELECT",
+    "exchange_id": 1
+  },
+  {
     "id": 5,
     "value": "MIDCPUBFY",
     "strike_difference": 75,
@@ -6,5 +43,50 @@
     "expiry_week": 0,
     "name": "NIFTY MID SELECT",
     "exchange_id": 1
+  },
+  {
+    "id": 6,
+    "value": "USDINR",
+    "strike_difference": 0.25,
+    "lot_size": 1000,
+    "expiry_week": 3,
+    "name": "USD to INR",
+    "exchange_id": 4
+  },
+  {
+    "id": 7,
+    "value": "GOLDM",
+    "strike_difference": 500,
+    "lot_size": 10,
+    "expiry_week": 2,
+    "name": "Gold Mini",
+    "exchange_id": 5
+  },
+  {
+    "id": 8,
+    "value": "SILVER",
+    "strike_difference": 1000,
+    "lot_size": 30,
+    "expiry_week": 4,
+    "name": "Silver",
+    "exchange_id": 5
+  },
+  {
+    "id": 9,
+    "value": "CRUDEOIL",
+    "strike_difference": 50,
+    "lot_size": 100,
+    "expiry_week": 2,
+    "name": "Crude Oil",
+    "exchange_id": 6
+  },
+  {
+    "id": 10,
+    "value": "NATGAS",
+    "strike_difference": 10,
+    "lot_size": 1250,
+    "expiry_week": 3,
+    "name": "Natural Gas",
+    "exchange_id": 6
   }
-  
+]
