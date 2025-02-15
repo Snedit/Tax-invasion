@@ -1,78 +1,107 @@
 import React, { useState } from "react";
 
-const EntryForm: React.FC = () => {
+const EntryForm = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
     <div className="p-4">
-      {/* Toggle Button */}
       <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition"
+        onClick={() => setIsVisible(true)}
+        className="bg-gray-800 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition font-semibold"
       >
-        {isVisible ? "Hide Form" : "Show Form"}
+        Add entry
       </button>
-
-      {/* Form (Conditionally Rendered) */}
+      
       {isVisible && (
-        <div className="mt-4 p-6 bg-gray-100 rounded-lg shadow-lg">
-          <form className="space-y-4">
-            <div className="flex flex-col">
-              <label htmlFor="id" className="font-semibold">
-                Enter the ID:
-              </label>
-              <input type="number" placeholder="ID" className="border p-2 rounded-md" />
-            </div>
-
-            <div className="flex flex-col">
-              <label htmlFor="value" className="font-semibold">
-                Enter the Value:
-              </label>
-              <input type="text" placeholder="Value" className="border p-2 rounded-md" />
-            </div>
-
-            <div className="flex flex-col">
-              <label htmlFor="strike_difference" className="font-semibold">
-                Enter the Strike Difference:
-              </label>
-              <input type="number" placeholder="Strike Difference" className="border p-2 rounded-md" />
-            </div>
-
-            <div className="flex flex-col">
-              <label htmlFor="lot_size" className="font-semibold">
-                Enter the Lot Size:
-              </label>
-              <input type="number" placeholder="Lot Size" className="border p-2 rounded-md" />
-            </div>
-
-            <div className="flex flex-col">
-              <label htmlFor="expiry_week" className="font-semibold">
-                Enter the Expiry Week:
-              </label>
-              <input type="number" placeholder="Expiry Week" className="border p-2 rounded-md" />
-            </div>
-
-            <div className="flex flex-col">
-              <label htmlFor="name" className="font-semibold">
-                Enter the Name:
-              </label>
-              <input type="text" placeholder="Name" className="border p-2 rounded-md" />
-            </div>
-
-            <div className="flex flex-col">
-              <label htmlFor="exchange_id" className="font-semibold">
-                Enter the Exchange ID:
-              </label>
-              <input type="number" placeholder="Exchange ID" className="border p-2 rounded-md" />
-            </div>
-
+        <div className="fixed inset-0 flex items-center justify-center">
+          {/* Semi-transparent background overlay */}
+          <div 
+            className="fixed inset-0 bg-black/30"
+            onClick={() => setIsVisible(false)}
+          />
+          
+          {/* Form Container */}
+          <div className="relative bg-white p-6 rounded-lg shadow-xl w-[400px] z-10">
+            {/* Close Button */}
             <button
-              type="submit"
-              className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600 transition"
+              onClick={() => setIsVisible(false)}
+              className="absolute top-4 right-4 text-gray-600 hover:text-red-500"
             >
-              Submit
+              ✕
             </button>
-          </form>
+            
+            <h2 className="text-xl font-semibold text-gray-800 mb-6 text-center">
+              Market Entry Form
+            </h2>
+            
+            <form className="space-y-4">
+              <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Value:</label>
+                    <input 
+                      type="text" 
+                      placeholder="Enter Value" 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Strike Diff:</label>
+                    <input 
+                      type="number" 
+                      placeholder="Strike Difference" 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Lot Size:</label>
+                    <input 
+                      type="number" 
+                      placeholder="Lot Size" 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Expiry Week:</label>
+                    <input 
+                      type="number" 
+                      placeholder="Expiry Week" 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Exchange ID:</label>
+                    <input 
+                      type="number" 
+                      placeholder="Exchange ID" 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Name:</label>
+                    <input 
+                      type="text" 
+                      placeholder="Enter Name" 
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                    />
+                  </div>
+                </div>
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full py-2 px-4 bg-green-500 text-white rounded-md hover:bg-green-600 transition mt-6"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       )}
     </div>

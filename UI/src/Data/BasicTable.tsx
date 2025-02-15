@@ -47,7 +47,7 @@ const BasicTable: React.FC = () => {
       <div className="border border-blue-50 shadow-md rounded-md bg-white p-4">
         <table className="w-full border-collapse">
           <thead>
-            <tr className="bg-blue-500 text-white">
+            <tr className="bg-gray-800 text-white">
               <th className="px-4 py-2 text-left">ID</th>
               <th className="px-4 py-2 text-left">Value</th>
               <th className="px-4 py-2 text-left">Strike Diff</th>
