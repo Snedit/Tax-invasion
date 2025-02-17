@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const EntryForm = () => {
+const EntryForm:React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
